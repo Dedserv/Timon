@@ -46,6 +46,26 @@
 - Ограничение размера zip: 50 MB (у нас ~1.2 MB — запас большой).
 - API Function Compute не вызывается агентом — создание/загрузка/публикация выполняются контролируемым модулем AutoClaw Main и пользователем.
 
+## Яндекс.Метрика (аналитика и цель «звонок»)
+
+Чтобы видеть трафик и оптимизировать Директ под звонки, установи счётчик Метрики:
+
+1. Создай счётчик: https://metrika.yandex.ru → «Добавить счётчик» → получи номер вида `XXXXXXXXX`.
+2. Вставь в `index.html` перед `</head>` (вместо комментария-заглушки):
+
+```html
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+ m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(XXXXXXXXX, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true });
+</script>
+```
+
+3. В настройках счётчика добавь цель «Клик по телефону» (условие: клик по ссылке, содержащей `tel:`).
+4. В Директе переключи «Цель продвижения» на «Максимум конверсий» и выбери эту цель — Директ будет
+   оптимизировать показы под звонки, а не просто под клики.
+
 ## Заметка про фото
 
 Текущие фото — из имеющегося набора: hero.jpg сделан апскейлом 440→880px, миниатюры галереи 150→320px.
