@@ -657,6 +657,41 @@ img { display: block; max-width: 100%; }
 .final-links a:hover { color: #fff; }
 .final-links span { opacity: .5; margin: 0 8px; }
 
+/* ---------- «О приюте» (информация для модерации) ---------- */
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1040px;
+  margin: 10px auto 0;
+}
+.about-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 24px;
+  box-shadow: var(--shadow-sm);
+}
+.about-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--terra-dark);
+}
+.about-card p { color: var(--ink-soft); font-size: 14.5px; }
+.about-list {
+  list-style: none;
+  display: grid;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-size: 14.5px;
+}
+
+@media (max-width: 900px) {
+  .about-grid { grid-template-columns: 1fr; max-width: 560px; }
+}
+
 /* ---------- Футер ---------- */
 
 .footer {
