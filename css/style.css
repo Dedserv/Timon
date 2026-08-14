@@ -680,6 +680,8 @@ img { display: block; max-width: 100%; }
   color: var(--terra-dark);
 }
 .about-card p { color: var(--ink-soft); font-size: 14.5px; }
+.about-req-name { font-weight: 700; color: var(--ink) !important; margin-bottom: 10px; }
+.about-note { color: var(--muted) !important; font-size: 13px !important; margin-top: 12px; font-style: italic; }
 .about-list {
   list-style: none;
   display: grid;
